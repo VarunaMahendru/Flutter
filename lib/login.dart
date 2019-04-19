@@ -221,7 +221,12 @@ class _LoginPageState extends State<LoginPage> {
        createSnackBar("Invalid password");
      }
      else{
-    AccessToken accessToken =    RestDataSource().login(_email, _password) as AccessToken;
+/*
+    AccessToken accessToken =   RestDataSource().login(_email, _password) as AccessToken;
+*/
+
+       Future<AccessToken> accessToken = RestDataSource().login(_email, _password);
+
      }
   // }
    /*else{

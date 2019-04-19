@@ -8,10 +8,10 @@ part of 'acessToken.dart';
 
 AccessToken _$AccessTokenFromJson(Map<String, dynamic> json) {
   return new AccessToken(
-      accessToken: json['accessToken'] as String,
-      tokenType: json['tokenType'] as String,
-      refreshToken: json['refreshToken'] as String,
-      expiresIn: json['expiresIn'],
+      accessToken: json['access_token'] as String,
+      tokenType: json['token_type'] as String,
+      refreshToken: json['refresh_token'] as String,
+      expiresIn: json['expires_in'],
       scope: json['scope'] as String);
 }
 
@@ -22,10 +22,10 @@ abstract class _$AccessTokenSerializerMixin {
   dynamic get expiresIn;
   String get scope;
   Map<String, dynamic> toJson() => <String, dynamic>{
-        'accessToken': accessToken,
-        'tokenType': tokenType,
-        'refreshToken': refreshToken,
-        'expiresIn': expiresIn,
+        'access_token': accessToken,
+        'token_type': tokenType,
+        'refresh_token': refreshToken,
+        'expires_in': expiresIn,
         'scope': scope
       };
 }

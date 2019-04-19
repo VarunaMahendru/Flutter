@@ -5,13 +5,13 @@ part 'acessToken.g.dart';   // associated generated dart file
 @JsonSerializable()
 class AccessToken {
 
-  @JsonKey(name: 'accessToken')
+  @JsonKey(name: 'access_token')
   final String accessToken;
-  @JsonKey(name: 'tokenType')
+  @JsonKey(name: 'token_type')
   final String tokenType;
-  @JsonKey(name: 'refreshToken')
+  @JsonKey(name: 'refresh_token')
   final String refreshToken;
-  @JsonKey(name: 'expiresIn')
+  @JsonKey(name: 'expires_in')
   var expiresIn;
   @JsonKey(name: 'scope')
   final String scope;
@@ -34,7 +34,6 @@ class AccessToken {
 
   factory AccessToken.fromJson(Map<String, dynamic> json) =>
       _$AccessTokenFromJson(json);
-
 
   }
 

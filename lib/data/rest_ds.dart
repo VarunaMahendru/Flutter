@@ -38,14 +38,12 @@ class RestDataSource{
           "username": username,
           "password": ProjectConstants.mD5(password)
 
-    }).then((dynamic res) async {
+    }).then((res) async {
 
       print("LoginResponse: "+res.toString());
-      var accesstoken = res['accessToken'];
-      print("accessTOken"+accesstoken.toString());
       final   parsed = json.decode(res.toString()) as Map<String, dynamic>;
       final accessToken = AccessToken.fromJson(parsed);
-
+      print("AccessToken"+accessToken.accessToken);
      // if (res["error"]) throw new Exception(res["error_msg"]);
       return await accessToken;
     });
